@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Neboj se IT – pomoc s technikou doma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pomůžu vám s nastavením domácího internetu, chytrých spotřebičů, telefonů, televize a další techniky. Na smart domácnost nejste sami.">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f5f5f7;
+    }
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 2rem 1.5rem 3rem;
+      position: relative;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .top-contact {
+      text-align: right;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .top-contact a {
+      color: #10b981;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 0.5rem;
+    }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    .hero-list li::before {
+      content: "✓";
+      margin-right: 0.5rem;
+      color: #10b981;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #10b981;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      background: #059669;
+    }
+    section {
+      padding: 2.5rem 1.5rem;
+    }
+    .section-alt {
+      background: #ffffff;
+    }
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 0;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.25rem 1.5rem;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      background: #e5e7eb;
+      color: #374151;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      margin-right: 0.3rem;
+    }
+.contact-form {
+  margin-top: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font: inherit;
+  margin-bottom: 0.8rem;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+/* Responsivita pro menší displeje */
+@media (max-width: 768px) {
+  .grid.grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="top-contact">
+      📞 <a href="tel:+420725951223">725 951 223</a>
+      ✉️ <a href="mailto:info@nebojseit.cz">info@nebojseit.cz</a>
+    </div>
+
+    <h1 class="hero-title">Neboj se IT. Na chytrou domácnost nejsi sám.</h1>
+    <p class="hero-subtitle">
+      Pomůžu vám s nastavením všeho, co máte doma – od Wi-Fi, přes televizi a telefon
+      až po chytré žárovky, kamery a další smart spotřebiče. V klidu, lidsky a bez technické hatmatilky.
+    </p>
+    <ul class="hero-list">
+      <li>Domácí IT a chytrá domácnost na jednom místě</li>
+      <li>Vysvětlím postup tak, abyste tomu rozuměli</li>
+      <li>Přijedu k vám domů, nebo poradím na dálku</li>
+    </ul>
+    <a href="#kontakt" class="btn-primary">Potřebuji pomoct s IT doma</a>
+  </div>
+</header>
+
+<section class="section-alt" id="sluzby">
+  <div class="container">
+    <h2>S čím vám doma pomůžu</h2>
+    <p>Neexistuje „hloupá otázka“. Pokud vás doma něco zlobí nebo si nejste jistí nastavením, jsem tu od toho.</p>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <img src="img/networking.jpg" alt="Wi-Fi a internet doma">
+        <div class="card-content">
+          <h3>Wi-Fi a internet doma</h3>
+          <p>Slabý signál, výpadky internetu, nastavení routeru, opakovačů nebo mesh sítě.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/tv-stream.jpg" alt="Televize a streamování">
+        <div class="card-content">
+          <h3>Televize a streamovací služby</h3>
+          <p>Propojení TV s internetem, Netflix, HBO Max, YouTube a další aplikace, nastavení ovladačů.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/devices.jpeg" alt="Telefony a počítače">
+        <div class="card-content">
+          <h3>Telefony, tablety a počítače</h3>
+          <p>Základní nastavení nových zařízení, instalace aplikací, zálohování fotek a dokumentů.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/smart.jpg" alt="Smart domácnost">
+        <div class="card-content">
+          <h3>Chytré spotřebiče a smart domácnost</h3>
+          <p>Žárovky, zásuvky, termostaty, vysavače, kamery, zvonky… ovládání přes mobil nebo hlasem.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/printer.jpg" alt="Tiskárny a sdílení">
+        <div class="card-content">
+          <h3>Tiskárny a sdílení</h3>
+          <p>Zprovoznění tiskárny pro všechny v domácnosti, skenování do e-mailu nebo do počítače.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/security.jpg" alt="Zabezpečení domácí sítě">
+        <div class="card-content">
+          <h3>Zabezpečení a klid na duši</h3>
+          <p>Základní zabezpečení domácí sítě, rodičovská kontrola a bezpečné chování na internetu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="jak">
+  <div class="container">
+    <h2>Jak spolupráce probíhá</h2>
+    <ol>
+      <li><strong>Ozvete se mi</strong> – zavoláte nebo napíšete, v pár větách popíšete problém nebo to, co chcete nastavit.</li>
+      <li><strong>Domluvíme termín a způsob</strong> – osobní návštěva u vás doma, nebo vzdálená pomoc po telefonu / online.</li>
+      <li><strong>Vyřešíme to a vše vysvětlím</strong> – nastavím, co je potřeba, a vysvětlím, co a proč jsem udělal.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section-alt" id="pro-koho">
+  <div class="container">
+    <h2>Pro koho je Neboj se IT</h2>
+    <p>Každá domácnost i malá firma dnes potřebuje, aby technika prostě fungovala. A když se něco pokazí – není důvod se bát zeptat.</p>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <img src="img/family.jpg" alt="Rodiny s dětmi">
+        <div class="card-content">
+          <h3>Rodiny</h3>
+          <p>Když potřebujete, aby všechno fungovalo – internet pro práci, online výuku i hry pro děti. Vysvětlím vše lidsky, bez složitého IT žargonu.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/grandpa.jpg" alt="Senioři a začátečníci">
+        <div class="card-content">
+          <h3>Senioři</h3>
+          <p>Trpělivé nastavení telefonu, tabletu, televize nebo kamery u dveří. Bez stresu, bez spěchu a s jasným vysvětlením každého kroku.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/homeoffice.jpg" alt="Home office a práce z domova">
+        <div class="card-content">
+          <h3>Home office</h3>
+          <p>Pomoc s domácím pracovním prostředím – stabilní Wi-Fi, tiskárna, sdílené dokumenty a zálohování. Aby práce z domova byla stejně pohodlná jako v kanceláři.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/smallcompany.jpg" alt="Živnostníci a malé firmy">
+        <div class="card-content">
+          <h3>Živnostníci a malé firmy</h3>
+          <p>Nastavení e-mailů, síťového úložiště, kamerového systému nebo pokladny. Postarám se, aby vám technika pomáhala, ne překážela.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="cenik">
+  <div class="container">
+    <h2>Kolik to stojí</h2>
+    <p>
+      Každá domácnost a každý problém je jiný. Cena se proto odvíjí od času a náročnosti.
+      Ještě předtím, než se do čehokoli pustím, vám řeknu odhad ceny, abyste měli jasno.
+    </p>
+    <ul>
+      <li>Úvodní konzultace – zdarma / orientační</li>
+      <li>Cena podle času a náročnosti</li>
+      <li>Možnost domluvit paušál předem</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section-alt" id="kontakt">
+  <div class="container">
+    <h2>Ozvěte se – Nebojte se IT</h2>
+
+    <div class="grid grid-2" style="align-items:start;">
+      <!-- Vlevo: textová část -->
+      <div>
+        <p>
+          Napište pár vět o tom, co potřebujete vyřešit, nebo rovnou zavolejte.  
+          Domluvíme se na dalším postupu – osobně nebo na dálku.
+        </p>
+
+        <p><strong>Kde působím:</strong><br>
+          Pokud jste z okolí Velkých Karlovic, Vizovic, Valašské Polanky, Luhačovic,  
+          Valašských Klobouk nebo Vsetína, rád přijedu osobně.<br>
+          Pro vzdálenější zájemce nabízím i pomoc na dálku – telefonicky nebo online připojením.
+        </p>
+
+        <p>
+          <strong>Telefon:</strong> <a href="tel:+420725951223">725 951 223</a><br>
+          <strong>E-mail:</strong> <a href="mailto:info@nebojseit.cz">info@nebojseit.cz</a>
+        </p>
+      </div>
+
+      <!-- Vpravo: kontaktní formulář -->
+      <div>
+        <form action="odeslat.php" method="post" class="contact-form">
+          <label for="jmeno"><strong>Vaše jméno:</strong></label><br>
+          <input type="text" id="jmeno" name="jmeno" required>
+
+          <label for="email"><strong>Váš e-mail:</strong></label><br>
+          <input type="email" id="email" name="email" required>
+
+          <label for="telefon"><strong>Váš telefon:</strong></label><br>
+          <input type="tel" id="telefon" name="telefon" required>
+
+          <label for="zprava"><strong>Vaše zpráva:</strong></label><br>
+          <textarea id="zprava" name="zprava" rows="4" required></textarea>
+
+          <!-- Honeypot proti robotům -->
+          <div style="display:none;">
+            <label>Nechejte prázdné:</label>
+            <input type="text" name="web">
+          </div>
+
+          <button type="submit" class="btn-primary">Odeslat zprávu</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  &copy; <span id="year"></span> Neboj se IT – domácí IT pomoc.  
+  <br>
+    IČ: 76376087 &nbsp;•&nbsp; Roman Fic, podnikající fyzická osoba zapsaná v živnostenském rejstříku  
+    Údaje ověřeny v systému <a href="https://wwwinfo.mfcr.cz/ares/" target="_blank" rel="noopener" style="color:#10b981;text-decoration:none;">ARES</a>
+</footer>
+
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
